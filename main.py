@@ -51,58 +51,58 @@ plots = {
     'Sectors': {
         'Energy': {
             'US vs. EU': ['S5ENRS Index', 'S600ENP Index'],
-            'US vs. Index': ['S5ENRS Index', 'SPX Index'],
-            'EU vs. Index': ['S600ENP Index', 'SXXP Index'],
+            'US vs. Index': ['S5ENRS Index', 'SPW Index'],
+            'EU vs. Index': ['S600ENP Index', 'SXXEWP Index'],
         },
         'Materials': {
-            'US vs. EU': ['S5MATR Index', 'SXBSCP INDEX'],
-            'US vs. Index': ['S5MATR Index', 'SPX Index'],
-            'EU vs. Index': ['SXBSCP INDEX', 'SXXP Index'],
+            'US vs. EU': ['S5MATR Index', 'SXBSCP Index'],
+            'US vs. Index': ['S5MATR Index', 'SPW Index'],
+            'EU vs. Index': ['SXBSCP Index', 'SXXEWP Index'],
         },
         'Industrials': {
             'US vs. EU': ['S5INDU Index', 'SXIDUP Index'],
-            'US vs. Index': ['S5INDU Index', 'SPX Index'],
-            'EU vs. Index': ['SXIDUP Index', 'SXXP Index'],
+            'US vs. Index': ['S5INDU Index', 'SPW Index'],
+            'EU vs. Index': ['SXIDUP Index', 'SXXEWP Index'],
         },
         'Consumer Discretionary': {
-            'US vs. EU': ['S5COND Index', 'S600CDP index'],
-            'US vs. Index': ['S5COND Index', 'SPX Index'],
-            'EU vs. Index': ['S600CDP index', 'SXXP Index'],
+            'US vs. EU': ['S5COND Index', 'S600CDP Index'],
+            'US vs. Index': ['S5COND Index', 'SPW Index'],
+            'EU vs. Index': ['S600CDP Index', 'SXXEWP Index'],
         },
         'Consumer Staples': {
-            'US vs. EU': ['S5CONS Index', 'S600CSP index'],
-            'US vs. Index': ['S5CONS Index', 'SPX Index'],
-            'EU vs. Index': ['S600CSP index', 'SXXP Index'],
+            'US vs. EU': ['S5CONS Index', 'S600CSP Index'],
+            'US vs. Index': ['S5CONS Index', 'SPW Index'],
+            'EU vs. Index': ['S600CSP Index', 'SXXEWP Index'],
         },
         'Health Care': {
             'US vs. EU': ['S5HLTH Index', 'SXDP Index'],
-            'US vs. Index': ['S5HLTH Index', 'SPX Index'],
-            'EU vs. Index': ['SXDP Index', 'SXXP Index'],
+            'US vs. Index': ['S5HLTH Index', 'SPW Index'],
+            'EU vs. Index': ['SXDP Index', 'SXXEWP Index'],
         },
         'Financials': {
             'US vs. EU': ['S5FINL Index', 'SXFINL Index'],
-            'US vs. Index': ['S5FINL Index', 'SPX Index'],
-            'EU vs. Index': ['SXFINL Index', 'SXXP Index'],
+            'US vs. Index': ['S5FINL Index', 'SPW Index'],
+            'EU vs. Index': ['SXFINL Index', 'SXXEWP Index'],
         },
         'Information Technology': {
             'US vs. EU': ['S5INFT Index', 'SX8P Index'],
-            'US vs. Index': ['S5INFT Index', 'SPX Index'],
-            'EU vs. Index': ['SX8P Index', 'SXXP Index'],
+            'US vs. Index': ['S5INFT Index', 'SPW Index'],
+            'EU vs. Index': ['SX8P Index', 'SXXEWP Index'],
         },
         'Communication Services': {
-            'US vs. EU': ['S5TELS Index', 'SXKP INDEX'],
-            'US vs. Index': ['S5TELS Index', 'SPX Index'],
-            'EU vs. Index': ['SXKP INDEX', 'SXXP Index'],
+            'US vs. EU': ['S5TELS Index', 'SXKP Index'],
+            'US vs. Index': ['S5TELS Index', 'SPW Index'],
+            'EU vs. Index': ['SXKP Index', 'SXXEWP Index'],
         },
         'Utilities': {
             'US vs. EU': ['S5UTIL Index', 'SX6P Index'],
-            'US vs. Index': ['S5UTIL Index', 'SPX Index'],
-            'EU vs. Index': ['SX6P Index', 'SXXP Index'],
+            'US vs. Index': ['S5UTIL Index', 'SPW Index'],
+            'EU vs. Index': ['SX6P Index', 'SXXEWP Index'],
         },
         'Real Estate': {
-            'US vs. EU': ['S5RLST Index', 'SX86P INDEX'],
-            'US vs. Index': ['S5RLST Index', 'SPX Index'],
-            'EU vs. Index': ['SX86P INDEX', 'SXXP Index'],
+            'US vs. EU': ['S5RLST Index', 'SX86P Index'],
+            'US vs. Index': ['S5RLST Index', 'SPW Index'],
+            'EU vs. Index': ['SX86P Index', 'SXXEWP Index'],
         }
     }
 }
@@ -124,7 +124,10 @@ if __name__ == '__main__':
                         second = data[tickers[1]]
                         first_name = indices["name"][tickers[0]]
                         second_name = indices["name"][tickers[1]]
-                        label = f'{first_name} vs. {second_name}'
+                        if first_name == second_name:
+                            label = first_name
+                        else:
+                            label = f'{first_name} vs. {second_name}'
                         relative_performance = calculate_relative_performance(first, second)
                         labels.append(f'{comparison}: {label}')
                         series_list.append(relative_performance)

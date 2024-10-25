@@ -8,14 +8,15 @@ import matplotlib.ticker as ticker
 
 def plot_ticker(title: str, labels: list, data: list, output_dir: str) -> str:
     series_with_labels = list(zip(data, labels))
-    series_with_labels.sort(key=lambda x: x[0].iloc[-1], reverse=True)
+    #series_with_labels.sort(key=lambda x: x[0].iloc[-1], reverse=True)
     sorted_data, sorted_labels = zip(*series_with_labels)
 
-    fig, ax = plt.subplots(figsize=(12, 8))
+    fig, ax = plt.subplots(figsize=(12, 4))
 
     ax.spines.top.set_visible(False)
     ax.spines.right.set_visible(False)
-    ax.xaxis.set_major_locator(dates.MonthLocator(interval=1))
+    ax.xaxis.set_minor_locator(dates.WeekdayLocator())
+    ax.xaxis.set_major_locator(dates.WeekdayLocator(interval=4))
     ax.xaxis.set_major_formatter(dates.DateFormatter('%b %Y'))
 
     ax.yaxis.set_major_locator(ticker.AutoLocator())
@@ -31,11 +32,15 @@ def plot_ticker(title: str, labels: list, data: list, output_dir: str) -> str:
         ax.plot(series.index, series, color=colors[i % len(colors)],
                 linestyle=linestyles[i // len(colors) % len(linestyles)], label=sorted_labels[i])
 
+        last_value = series.iloc[-1]
+        last_date = series.index[-1]
+        ax.text(last_date + pd.DateOffset(days=5), last_value, f'{round(last_value, 2)}%', color=colors[i % len(colors)],
+                ha='left', va='center', fontsize=10, fontweight='bold')
+
     ax.set_xlim(min([min(series.index) for series in sorted_data]), max([max(series.index) for series in sorted_data]))
 
     plt.title(title)
-    ncol = max(3, len(labels) // 6)
-    ax.legend(loc='upper center', bbox_to_anchor=(0.5, -0.075), frameon=False, ncol=ncol)
+    ax.legend(loc='upper center', bbox_to_anchor=(0.5, -0.075), frameon=False)
 
     plt.tight_layout()
     plt.subplots_adjust(bottom=0.3)
