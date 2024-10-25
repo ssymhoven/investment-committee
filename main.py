@@ -48,74 +48,63 @@ plots = {
         'GS Funds': 'GSINDAI LX Equity',
         'D&R Aktien': 'DRAKTIV GR Equity'
     },
-    'US Sectors vs. S&P 500': {
-        'Energy': ['S5ENRS Index', 'SPX Index'],
-        'Materials': ['S5MATR Index', 'SPX Index'],
-        'Industrials': ['S5INDU Index', 'SPX Index'],
-        'Consumer Discretionary': ['S5COND Index', 'SPX Index'],
-        'Consumer Staples': ['S5CONS Index', 'SPX Index'],
-        'Health Care': ['S5HLTH Index', 'SPX Index'],
-        'Financials': ['S5FINL Index', 'SPX Index'],
-        'IT': ['S5INFT Index', 'SPX Index'],
-        'Communication Services': ['S5TELS Index', 'SPX Index'],
-        'Utilities': ['S5UTIL Index', 'SPX Index'],
-        'Real Estate': ['S5RLST Index', 'SPX Index'],
-    },
-    'EU Sectors I vs. STOXX Europe 600': {
-        'Media': ['SXMP Index', 'SXXP Index'],
-        'Food Beverage': ['S600FOP Index', 'SXXP Index'],
-        'Personal Care': ['S600PDP Index', 'SXXP Index'],
-        'Health Care': ['SXDP Index', 'SXXP Index'],
-        'Financial Services': ['SXFP Index', 'SXXP Index'],
-        'Banks': ['SX7P Index', 'SXXP Index'],
-        'Insurance': ['SXIP Index', 'SXXP Index'],
-        'Telecommunication': ['SXKP Index', 'SXXP Index'],
-        'Utilities': ['SX6P Index', 'SXXP Index'],
-        'Real Estate': ['SX86P Index', 'SXXP Index']
-    },
-    'EU Sectors II vs. STOXX Europe 600': {
-        'Automobile & Parts': ['SXAP Index', 'SXXP Index'],
-        'Travel & Leisure': ['SXTP Index', 'SXXP Index'],
-        'Basic Resources': ['SXPP Index', 'SXXP Index'],
-        'Technology': ['SX8P Index', 'SXXP Index'],
-        'Chemicals': ['SX4P Index', 'SXXP Index'],
-        'Industrial Goods': ['SXNP Index', 'SXXP Index'],
-        'Construction': ['SXOP Index', 'SXXP Index'],
-        'Retail': ['SXRP Index', 'SXXP Index'],
-        'Consumer Products': ['S600CPP Index', 'SXXP Index'],
-        'Energy': ['S600ENP Index', 'SXXP Index'],
-    },
-    'US Energy': ['S5ENRS Index', 'SPX Index'],
-    'US Materials': ['S5MATR Index', 'SPX Index'],
-    'US Industrials': ['S5INDU Index', 'SPX Index'],
-    'US Consumer Discretionary': ['S5COND Index', 'SPX Index'],
-    'US Consumer Staples': ['S5CONS Index', 'SPX Index'],
-    'US Health Care': ['S5HLTH Index', 'SPX Index'],
-    'US Financials': ['S5FINL Index', 'SPX Index'],
-    'US IT': ['S5INFT Index', 'SPX Index'],
-    'US Communication Services': ['S5TELS Index', 'SPX Index'],
-    'US Utilities': ['S5UTIL Index', 'SPX Index'],
-    'US Real Estate': ['S5RLST Index', 'SPX Index'],
-    'EU Media': ['SXMP Index', 'SXXP Index'],
-    'EU Food Beverage': ['S600FOP Index', 'SXXP Index'],
-    'EU Personal Care': ['S600PDP Index', 'SXXP Index'],
-    'EU Health Care': ['SXDP Index', 'SXXP Index'],
-    'EU Financial Services': ['SXFP Index', 'SXXP Index'],
-    'EU Banks': ['SX7P Index', 'SXXP Index'],
-    'EU Insurance': ['SXIP Index', 'SXXP Index'],
-    'EU Telecommunication': ['SXKP Index', 'SXXP Index'],
-    'EU Utilities': ['SX6P Index', 'SXXP Index'],
-    'EU Real Estate': ['SX86P Index', 'SXXP Index'],
-    'EU Automobile & Parts': ['SXAP Index', 'SXXP Index'],
-    'EU Travel & Leisure': ['SXTP Index', 'SXXP Index'],
-    'EU Basic Resources': ['SXPP Index', 'SXXP Index'],
-    'EU Technology': ['SX8P Index', 'SXXP Index'],
-    'EU Chemicals': ['SX4P Index', 'SXXP Index'],
-    'EU Industrial Goods': ['SXNP Index', 'SXXP Index'],
-    'EU Construction': ['SXOP Index', 'SXXP Index'],
-    'EU Retail': ['SXRP Index', 'SXXP Index'],
-    'EU Consumer Products': ['S600CPP Index', 'SXXP Index'],
-    'EU Energy': ['S600ENP Index', 'SXXP Index'],
+    'Sectors': {
+        'Energy': {
+            'US vs. EU': ['S5ENRS Index', 'S600ENP Index'],
+            'US vs. Index': ['S5ENRS Index', 'SPX Index'],
+            'EU vs. Index': ['S600ENP Index', 'SXXP Index'],
+        },
+        'Materials': {
+            'US vs. EU': ['S5MATR Index', 'SXBSCP INDEX'],
+            'US vs. Index': ['S5MATR Index', 'SPX Index'],
+            'EU vs. Index': ['SXBSCP INDEX', 'SXXP Index'],
+        },
+        'Industrials': {
+            'US vs. EU': ['S5INDU Index', 'SXIDUP Index'],
+            'US vs. Index': ['S5INDU Index', 'SPX Index'],
+            'EU vs. Index': ['SXIDUP Index', 'SXXP Index'],
+        },
+        'Consumer Discretionary': {
+            'US vs. EU': ['S5COND Index', 'S600CDP index'],
+            'US vs. Index': ['S5COND Index', 'SPX Index'],
+            'EU vs. Index': ['S600CDP index', 'SXXP Index'],
+        },
+        'Consumer Staples': {
+            'US vs. EU': ['S5CONS Index', 'S600CSP index'],
+            'US vs. Index': ['S5CONS Index', 'SPX Index'],
+            'EU vs. Index': ['S600CSP index', 'SXXP Index'],
+        },
+        'Health Care': {
+            'US vs. EU': ['S5HLTH Index', 'SXDP Index'],
+            'US vs. Index': ['S5HLTH Index', 'SPX Index'],
+            'EU vs. Index': ['SXDP Index', 'SXXP Index'],
+        },
+        'Financials': {
+            'US vs. EU': ['S5FINL Index', 'SXFINL Index'],
+            'US vs. Index': ['S5FINL Index', 'SPX Index'],
+            'EU vs. Index': ['SXFINL Index', 'SXXP Index'],
+        },
+        'Information Technology': {
+            'US vs. EU': ['S5INFT Index', 'SX8P Index'],
+            'US vs. Index': ['S5INFT Index', 'SPX Index'],
+            'EU vs. Index': ['SX8P Index', 'SXXP Index'],
+        },
+        'Communication Services': {
+            'US vs. EU': ['S5TELS Index', 'SXKP INDEX'],
+            'US vs. Index': ['S5TELS Index', 'SPX Index'],
+            'EU vs. Index': ['SXKP INDEX', 'SXXP Index'],
+        },
+        'Utilities': {
+            'US vs. EU': ['S5UTIL Index', 'SX6P Index'],
+            'US vs. Index': ['S5UTIL Index', 'SPX Index'],
+            'EU vs. Index': ['SX6P Index', 'SXXP Index'],
+        },
+        'Real Estate': {
+            'US vs. EU': ['S5RLST Index', 'SX86P INDEX'],
+            'US vs. Index': ['S5RLST Index', 'SPX Index'],
+            'EU vs. Index': ['SX86P INDEX', 'SXXP Index'],
+        }
+    }
 }
 
 
@@ -123,34 +112,57 @@ if __name__ == '__main__':
 
     for title, groups in plots.items():
 
-        if isinstance(groups, dict):
-            labels = []
-            series_list = []
+        if title == 'Sectors':  # Focus on sectors
+            for sector, comparisons in groups.items():  # Loop through sectors
+                labels = []
+                series_list = []
 
-            for sub_title, tickers in groups.items():
+                # Loop through each comparison in the sector (US vs. EU, US vs. Index, EU vs. Index)
+                for comparison, tickers in comparisons.items():
+                    if isinstance(tickers, list):
+                        first = data[tickers[0]]
+                        second = data[tickers[1]]
+                        first_name = indices["name"][tickers[0]]
+                        second_name = indices["name"][tickers[1]]
+                        label = f'{first_name} vs. {second_name}'
+                        relative_performance = calculate_relative_performance(first, second)
+                        labels.append(f'{comparison}: {label}')
+                        series_list.append(relative_performance)
 
-                if isinstance(tickers, list):
-                    first = data[tickers[0]]
-                    second = data[tickers[1]]
-                    first_name = indices["name"][tickers[0]]
-                    second_name = indices["name"][tickers[1]]
-                    label = f'{first_name} vs. {second_name}'
-                    relative_performance = calculate_relative_performance(first, second)
-                    labels.append(label)
-                    series_list.append(relative_performance)
-                elif isinstance(tickers, str):
-                    first = data[tickers]
-                    first_name = indices["name"][tickers]
-                    relative_performance = calculate_yield(first)
-                    labels.append(first_name)
-                    series_list.append(relative_performance)
+                # Plot each sector with its comparisons
+                plot_ticker(title=f'{sector} Sector', labels=labels, data=series_list, output_dir=output_dir)
 
-            plot_ticker(title=title, labels=labels, data=series_list, output_dir=output_dir)
-        elif isinstance(groups, list):
-            first = data[groups[0]]
-            second = data[groups[1]]
-            first_name = indices["name"][groups[0]]
-            second_name = indices["name"][groups[1]]
-            label = f'{first_name} vs. {second_name}'
-            relative_performance = calculate_relative_performance(first, second)
-            plot_ticker(title=title, labels=[label], data=[relative_performance], output_dir=output_dir)
+        else:
+            # Your existing code for non-sector plots
+            if isinstance(groups, dict):
+                labels = []
+                series_list = []
+
+                for sub_title, tickers in groups.items():
+                    if isinstance(tickers, list):
+                        first = data[tickers[0]]
+                        second = data[tickers[1]]
+                        first_name = indices["name"][tickers[0]]
+                        second_name = indices["name"][tickers[1]]
+                        label = f'{first_name} vs. {second_name}'
+                        relative_performance = calculate_relative_performance(first, second)
+                        labels.append(label)
+                        series_list.append(relative_performance)
+                    elif isinstance(tickers, str):
+                        first = data[tickers]
+                        first_name = indices["name"][tickers]
+                        relative_performance = calculate_yield(first)
+                        labels.append(first_name)
+                        series_list.append(relative_performance)
+
+                plot_ticker(title=title, labels=labels, data=series_list, output_dir=output_dir)
+
+            elif isinstance(groups, list):
+                first = data[groups[0]]
+                second = data[groups[1]]
+                first_name = indices["name"][groups[0]]
+                second_name = indices["name"][groups[1]]
+                label = f'{first_name} vs. {second_name}'
+                relative_performance = calculate_relative_performance(first, second)
+                plot_ticker(title=title, labels=[label], data=[relative_performance], output_dir=output_dir)
+

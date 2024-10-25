@@ -24,7 +24,7 @@ def plot_ticker(title: str, labels: list, data: list, output_dir: str) -> str:
 
     ax.axhline(0, color='grey', linestyle='--', linewidth=0.5)
 
-    colors = ["#7EC0C6", "#124877", "#E91457", "#018C7D", "#6F3E2E", "#FD7200"]
+    colors = ["#124877", "#74c0c5", "#6f99ed", "#b2b2b1", "#018c7d", '#7fbd39', "#539eb9", "#31c1ba", "#c5b27d", "#6cb5df"]
     linestyles = ['-', '--', ':']
 
     for i, series in enumerate(sorted_data):
@@ -46,3 +46,4 @@ def plot_ticker(title: str, labels: list, data: list, output_dir: str) -> str:
     plt.close()
 
     return path
+
