@@ -44,65 +44,67 @@ plots = {
     'Satellites Investments': {
         'BIT Biotech': 'BCBIOII GR Equity',
         'BIT Global Internet': 'HAL30II GR Equity',
-        'JP Small Cap': 'PARJSCI LX Equity',
-        'GS Funds': 'GSINDAI LX Equity',
+        'MSCI Europe Small Cap': 'ZPRX GY Equity',
+        'Goldman Sachs India': 'GSINDAI LX Equity',
+        'Goldman Sachs Emerging Markets': 'GMEPISA LX Equity',
+        'MSCI Europe Industrials': 'XSNR GY Equity',
         'D&R Aktien': 'DRAKTIV GR Equity'
     },
     'Sectors': {
         'Energy': {
             'US vs. EU': ['S5ENRS Index', 'S600ENP Index'],
-            'US vs. Index': ['S5ENRS Index', 'SPW Index'],
-            'EU vs. Index': ['S600ENP Index', 'SXXEWP Index'],
+            'US vs. Index': ['S5ENRS Index', 'SXXP Index'],
+            'EU vs. Index': ['S600ENP Index', 'SXXP Index'],
         },
         'Materials': {
             'US vs. EU': ['S5MATR Index', 'SXBSCP Index'],
-            'US vs. Index': ['S5MATR Index', 'SPW Index'],
-            'EU vs. Index': ['SXBSCP Index', 'SXXEWP Index'],
+            'US vs. Index': ['S5MATR Index', 'SPX Index'],
+            'EU vs. Index': ['SXBSCP Index', 'SXXP Index'],
         },
         'Industrials': {
             'US vs. EU': ['S5INDU Index', 'SXIDUP Index'],
-            'US vs. Index': ['S5INDU Index', 'SPW Index'],
-            'EU vs. Index': ['SXIDUP Index', 'SXXEWP Index'],
+            'US vs. Index': ['S5INDU Index', 'SPX Index'],
+            'EU vs. Index': ['SXIDUP Index', 'SXXP Index'],
         },
         'Consumer Discretionary': {
             'US vs. EU': ['S5COND Index', 'S600CDP Index'],
-            'US vs. Index': ['S5COND Index', 'SPW Index'],
-            'EU vs. Index': ['S600CDP Index', 'SXXEWP Index'],
+            'US vs. Index': ['S5COND Index', 'SPX Index'],
+            'EU vs. Index': ['S600CDP Index', 'SXXP Index'],
         },
         'Consumer Staples': {
             'US vs. EU': ['S5CONS Index', 'S600CSP Index'],
-            'US vs. Index': ['S5CONS Index', 'SPW Index'],
-            'EU vs. Index': ['S600CSP Index', 'SXXEWP Index'],
+            'US vs. Index': ['S5CONS Index', 'SPX Index'],
+            'EU vs. Index': ['S600CSP Index', 'SXXP Index'],
         },
         'Health Care': {
             'US vs. EU': ['S5HLTH Index', 'SXDP Index'],
-            'US vs. Index': ['S5HLTH Index', 'SPW Index'],
-            'EU vs. Index': ['SXDP Index', 'SXXEWP Index'],
+            'US vs. Index': ['S5HLTH Index', 'SPX Index'],
+            'EU vs. Index': ['SXDP Index', 'SXXP Index'],
         },
         'Financials': {
             'US vs. EU': ['S5FINL Index', 'SXFINL Index'],
-            'US vs. Index': ['S5FINL Index', 'SPW Index'],
-            'EU vs. Index': ['SXFINL Index', 'SXXEWP Index'],
+            'US vs. Index': ['S5FINL Index', 'SPX Index'],
+            'EU vs. Index': ['SXFINL Index', 'SXXP Index'],
         },
         'Information Technology': {
             'US vs. EU': ['S5INFT Index', 'SX8P Index'],
-            'US vs. Index': ['S5INFT Index', 'SPW Index'],
-            'EU vs. Index': ['SX8P Index', 'SXXEWP Index'],
+            'US vs. Index': ['S5INFT Index', 'SPX Index'],
+            'EU vs. Index': ['SX8P Index', 'SXXP Index'],
         },
         'Communication Services': {
             'US vs. EU': ['S5TELS Index', 'SXKP Index'],
-            'US vs. Index': ['S5TELS Index', 'SPW Index'],
-            'EU vs. Index': ['SXKP Index', 'SXXEWP Index'],
+            'US vs. Index': ['S5TELS Index', 'SPX Index'],
+            'EU vs. Index': ['SXKP Index', 'SXXP Index'],
         },
         'Utilities': {
             'US vs. EU': ['S5UTIL Index', 'SX6P Index'],
-            'US vs. Index': ['S5UTIL Index', 'SPW Index'],
-            'EU vs. Index': ['SX6P Index', 'SXXEWP Index'],
+            'US vs. Index': ['S5UTIL Index', 'SPX Index'],
+            'EU vs. Index': ['SX6P Index', 'SXXP Index'],
         },
         'Real Estate': {
             'US vs. EU': ['S5RLST Index', 'SX86P Index'],
-            'US vs. Index': ['S5RLST Index', 'SPW Index'],
-            'EU vs. Index': ['SX86P Index', 'SXXEWP Index'],
+            'US vs. Index': ['S5RLST Index', 'SPX Index'],
+            'EU vs. Index': ['SX86P Index', 'SXXP Index'],
         }
     }
 }

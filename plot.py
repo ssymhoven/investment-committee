@@ -40,7 +40,7 @@ def plot_ticker(title: str, labels: list, data: list, output_dir: str) -> str:
     ax.set_xlim(min([min(series.index) for series in sorted_data]), max([max(series.index) for series in sorted_data]))
 
     plt.title(title)
-    ax.legend(loc='upper center', bbox_to_anchor=(0.5, -0.075), frameon=False)
+    ax.legend(loc='upper center', bbox_to_anchor=(0.5, -0.1), frameon=False, ncol=3)
 
     plt.tight_layout()
     plt.subplots_adjust(bottom=0.3)
